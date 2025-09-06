@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Written Movie & TV Reviews - GYGO Network</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="modal-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>GYGO Network</h1>
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="archive.html" class="nav-link">Archive</a></li>
+                    <li><a href="conventions.html" class="nav-link">Convention Coverage</a></li>
+                    <li><a href="reviews.html" class="nav-link active">Reviews</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Written Movie & TV Reviews</h1>
+            <p>In-depth analysis and reviews of the latest movies, TV shows, and streaming content</p>
+        </div>
+    </section>
+
+
+
+    <!-- Reviews Grid -->
+    <section class="reviews-section">
+        <div class="container">
+            <div class="reviews-grid">
+                <!-- Review Card 1 -->
+                <article class="review-card" data-category="movies" data-review-id="superhero-blockbuster">
+                    <div class="review-image">
+                        <img src="images/movie-poster.svg" alt="Latest Superhero Movie">
+                        <div class="rating-badge">
+                            <span class="rating">8.5</span>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <div class="review-meta">
+                            <span class="category">Movie Review</span>
+                            <span class="date">December 15, 2024</span>
+                        </div>
+                        <h3>The Latest Superhero Blockbuster: A Visual Spectacle</h3>
+                        <p>This latest entry in the superhero genre delivers stunning visuals and heart-pounding action sequences. While the plot follows familiar beats, the character development and emotional core elevate it above typical popcorn entertainment...</p>
+                        <a href="#" class="read-more-btn">Read Full Review</a>
+                    </div>
+                </article>
+
+                <!-- Review Card 2 -->
+                <article class="review-card" data-category="tv" data-review-id="scifi-series">
+                    <div class="review-image">
+                        <img src="images/tv-poster.svg" alt="Sci-Fi Series">
+                        <div class="rating-badge">
+                            <span class="rating">9.2</span>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <div class="review-meta">
+                            <span class="category">TV Review</span>
+                            <span class="date">December 12, 2024</span>
+                        </div>
+                        <h3>New Sci-Fi Series Redefines Television Excellence</h3>
+                        <p>This groundbreaking series combines complex storytelling with cutting-edge special effects. The ensemble cast delivers powerhouse performances that anchor the show's ambitious narrative scope...</p>
+                        <a href="#" class="read-more-btn">Read Full Review</a>
+                    </div>
+                </article>
+
+                <!-- Review Card 3 -->
+                <article class="review-card" data-category="streaming" data-review-id="netflix-original">
+                    <div class="review-image">
+                        <img src="images/streaming-poster.svg" alt="Streaming Original">
+                        <div class="rating-badge">
+                            <span class="rating">7.8</span>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <div class="review-meta">
+                            <span class="category">Streaming Review</span>
+                            <span class="date">December 10, 2024</span>
+                        </div>
+                        <h3>Netflix's Latest Original: Hit or Miss?</h3>
+                        <p>The streaming giant's newest offering shows promise with its unique premise and strong production values. However, pacing issues and underdeveloped characters prevent it from reaching its full potential...</p>
+                        <a href="#" class="read-more-btn">Read Full Review</a>
+                    </div>
+                </article>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Review Modal -->
+    <div id="reviewModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-header">
+                <img id="modalImage" src="" alt="Review Image">
+                <div class="modal-meta">
+                    <h2 id="modalTitle"></h2>
+                    <div class="modal-info">
+                        <span id="modalCategory" class="category"></span>
+                        <span id="modalDate" class="date"></span>
+                        <div id="modalRating" class="rating-display">
+                            <span id="modalRatingValue" class="rating-value"></span>
+                            <div id="modalStars" class="stars"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div id="modalContent" class="review-text"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-hero">
+                        <img src="assets/hero.png" alt="GYGO Network" class="footer-logo">
+                    </div>
+                    <div class="footer-links">
+                        <h4>Quick Links</h4>
+                        <nav class="footer-nav">
+                            <a href="index.html">Home</a>
+                            <a href="archive.html">Archive</a>
+                            <a href="conventions.html">Convention Coverage</a>
+                            <a href="reviews.html">Reviews</a>
+                        </nav>
+                    </div>
+                    <div class="footer-social">
+                        <h4>Follow Us</h4>
+                        <div class="social-icons">
+                            <a href="https://www.facebook.com/gygonetwork" target="_blank"><i class="fab fa-facebook"></i></a>
+                            <a href="https://www.twitch.tv/gygonetwork" target="_blank"><i class="fab fa-twitch"></i></a>
+                            <a href="https://www.youtube.com/@GYGONetwork" target="_blank"><i class="fab fa-youtube"></i></a>
+                            <a href="https://www.threads.com/@gygostudio" target="_blank"><i class="fab fa-threads"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2014 GYGO Network. All rights reserved.</p>
+                    <p class="footer-attribution">Built by <a href="https://thefreewebsitewizards.com/?fbclid=PAZXh0bgNhZW0CMTEAAad0Jm-GNlXnPPJ1LVG1DBVBoUGdRHC5m3FFwUqGHjUfujAnDPDhsINN8mAv1A_aem_owWh2qpkEErFPYCqV9cPEg" target="_blank">The Free Website Wizards</a></p>
+                </div>
+            </div>
+        </footer>
+
+    <script src="script.js"></script>
+    <script src="reviews.js"></script>
+</body>
+</html>
